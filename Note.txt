@@ -4,3 +4,13 @@ const 的變數是不可變的；let & var 的變數是可變的
 const & let 都是區塊作用域(block-scoped)，只在被聲明的區塊內有效；var 是函式作用域 (function-scoped)
 var 可以重複聲明，const & let 不行
 
+boolean & Boolean 差別
+-------------------------------
+let isDone: boolean = false -> 布林型別
+let createdByNewBoolean = new Boolean(1) -> 布林物件
+* 建議使用布林型別就好
+
+null & undefine
+-------------------------------
+null: 沒有值
+undefine: 尚未定義
