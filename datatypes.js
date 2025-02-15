@@ -19,7 +19,14 @@ function alertName() {
     alert('My name is Tom');
 }
 // 創建一個變數也可不定義任何型別，代表該變數可以是 any type
-var value = null; // 型別推斷為 `any`
+// let value = null -> 也可代表定義為 `any` 型別，也不會編譯錯誤
+var value = null; // 明確定義為 `any` 型別
 value = 42; // 合法
 value = "hello"; // 合法
 console.log(value); // 輸出: "hello"
+// 可以在定義該變數的 type 時就先定義該變數有可能的 data type。以下範例就說明 value1 可以是 number / null type
+var value1 = null; // 可以是數字或 null
+value1 = 42; // 合法
+value1 = null; // 合法
+// value1 = 'Hello' -> 會報錯： Type 'string' is not assignable to type 'number'.
+console.log(value); // 輸出: null
