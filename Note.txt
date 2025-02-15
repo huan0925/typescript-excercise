@@ -1,8 +1,8 @@
-const & let & var 差別
+const & let & var 差別（關鍵字）
 -------------------------------
 const 的變數是不可變的；let & var 的變數是可變的
 const & let 都是區塊作用域(block-scoped)，只在被聲明的區塊內有效；var 是函式作用域 (function-scoped)
-var 可以重複聲明，const & let 不行
+var 可以重複聲明，const & let 不行（var 在 typescript 已經很少被使用）
 
 boolean & Boolean 差別
 -------------------------------
@@ -14,3 +14,19 @@ null & undefine
 -------------------------------
 null: 沒有值
 undefine: 尚未定義
+
+void
+-------------------------------
+void function -> 沒有 return 值
+void 變數 -> 只能賦值為 undefine
+void 是型別(like number / string 這種)，主要用於函式沒有回傳值時，或者某些特殊的變數型別。
+
+function & const
+-------------------------------
+特性	       |function                           |const（箭頭函式）
+-----------------------------------------------------------------------------
+語法	        使用 function 關鍵字聲明	           使用 const 搭配箭頭函式
+提升（Hoisting） 支援（可以在定義之前使用）	              不支援（必須在定義後使用）
+是否可重新賦值	  不可直接重新賦值，但可用其他變數指向該函式  無法重新賦值
+this 行為	    擁有自己的 this	                       使用外部作用域的 this
+適用場合	     全域函式、大型專案函式	                  工具函式、匿名函式、箭頭函式
